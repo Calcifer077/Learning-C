@@ -74,3 +74,39 @@ int main(){
 	return 0;
 }
 .................>
+#include<stdio.h>
+
+int main(){
+	char c;
+	printf("Enter a chacter(m, t, w, T, f , s , S):");
+	scanf("%c", &c);
+	
+	switch(c){
+		case 'm':
+			printf("MOnday \n");
+			break;
+		case 't':
+			printf("Tuesday \n");
+			break;
+		case 'w':
+			printf("Wednesday \n");
+			break;
+		case 'T':
+			printf("Thurusday \n");
+			break;
+		case 'f':
+			printf("Friday \n");
+			break;
+		case 's':
+			printf("Saturday \n");
+			break;
+		case 'S':
+			printf("Sunday \n");
+			break;
+		default:
+			printf("nothing found.");
+	}
+	
+	return 0;
+}
+.................>
