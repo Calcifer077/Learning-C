@@ -42,3 +42,36 @@ int main(){
 	
 	return 0;
 }
+//logical operators
+#include<stdio.h>
+
+int main(){
+	int a =3, b = 4, c=5; 
+	printf("1.=%d \n", a<b && a<c); //1
+	printf("2.=%d \n", a<b && c<b); //0
+	printf("3.=%d \n", a>b && a<c);//0
+	printf("4.=%d \n", a>c && b>c);//0
+	printf("5.=%d \n", a==b && c==c);//0
+	printf("6.=%d \n", !(a<b && b<c));//0
+	printf("7.=%d \n", !(a>b && b>c));//1
+	printf("8.=%d \n", !(a<b || b<c));//0
+	printf("9.=%d \n", !(a>b || b>c));//11	
+	return 0;
+}
+//assignmet operators
+#include<stdio.h>
+
+int main(){
+	int a = 10;
+	a += 10;
+	printf("1.= %d \n", a);//20
+	a -=10;
+	printf("2.= %d \n", a);//10
+	a *=10;
+	printf("3.= %d \n", a);//100
+	a /=10;
+	printf("4.= %d \n", a);//10
+	a %=10;
+	printf("1.= %d \n", a);//0
+	return 0;
+}
