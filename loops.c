@@ -32,3 +32,18 @@ int main(){
 	}
 	return 0;
 }
+........>
+//to print the numbers from 1 to 50 without printing odd numbers:
+#include<stdio.h>
+
+int main(){
+	int i;
+	for(i=1;i<=50;i++){
+		if(i%2!=0){
+			continue;
+		}
+		printf("%d \n",i);
+	}
+	return 0;
+}
+...........>
