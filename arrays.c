@@ -37,3 +37,28 @@ int main(){
 	return 0;
 }
 ............>
+//finding the greatest of numbers using arrays:
+#include<stdio.h>
+
+int main(){
+	int i;
+	int a[100];
+	int n;
+	printf("Enter a number upto which this program will run(1 to 10): ");
+	scanf("%d", &n);
+	
+	for(i=1;i<n;++i){
+		printf("Enter number_%d: ",i);
+		scanf("%d", &a[i]);
+	}
+	for(i=1;i<n;++i){
+		if(a[0] < a[i]){
+			a[0]=a[i];
+		}
+	}
+	printf("The largst number is %d", a[0]);
+	
+	return 0;
+}
+..........>
+//to search for a particular number in an array:
