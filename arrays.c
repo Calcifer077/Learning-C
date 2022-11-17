@@ -83,3 +83,77 @@ int main(){
 }
 ..........>
 //to search for a particular number in an array:
+#include<stdio.h>
+
+int main(){
+	int i,n;
+	int arr[10];
+	printf("Enter the number of elements in your array: ");
+	scanf("%d", &n);
+	
+	for(i=0;i<n;i++){
+		printf("Enter element no._%d_:", i+1);
+		scanf("%d", &arr[i]);
+	}
+	int s;
+	printf("Enter the element you want to search: ");
+	scanf("%d", &s);
+	
+	for(i=0;i<n;i++){
+		if(arr[i]==s){
+			printf("%d found at %d", s,i+1);
+			break;
+		}
+	}
+	return 0;
+}
+.........>
+//multiplication of array:
+#include<stdio.h>
+
+int main(){
+	int a[10][10], b[10][10], c[10][10];
+	int m1,n1,m2,n2;
+	int i,j,s,k;
+	printf("Enter the number of rows and columns for first matrix: ");
+	scanf("%d%d", &m1,&n1);
+	
+	printf("Enter the number of rowws and columns for the second matrix: ");
+	scanf("%d%d", &m2,&n2);
+	
+	if(n1!=m2){
+		printf("these matrix cant be multiplied. ");
+	}
+	if(n1==m2){
+		printf("Enter elements for the matrix 1: ");
+		for(i=0;i<m1;i++){
+			for(j=0;j<n1;j++){
+				scanf("%d", &a[i][j]);
+			}
+		}
+		printf("Enter elements for the matrix 2: ");
+		for(i=0;i<m2;i++){
+			for(j=0;j<n2;j++){
+				scanf("%d", &b[i][j]);
+			}
+		}
+		for(i=0;i<m1;i++){
+			for(j=0;j<n2;j++){
+				s = 0;
+				for(k=0;k<n1;k++){
+					s = s + (a[i][k]*b[k][j]);
+					c[i][j]=s;
+				}
+			}
+		}
+		printf("product of matrix is: \n");
+		for(i=0;i<m1;i++){
+			for(j=0;j<n2;j++){
+				printf("%d \t", c[i][j]);
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
+.........>
