@@ -36,6 +36,25 @@ int main(){
 	return 0;
 }
 ............>
+//taking input from the user using array and pointers:
+#include<stdio.h>
+
+int main(){
+	int index[5];
+	int i;
+	
+	int *ptr = &index[0];
+	for(i=0;i<5;i++){
+		printf("%d index : ", i);
+		scanf("%d", (ptr + i));
+	}	
+	
+	for(i=0;i<5;i++){
+		printf("%d index = %d\n", i, *(ptr + i));
+	}
+	return 0;
+}
+...............>
 //Finding average of the inputted numbers:
 #include<stdio.h>
 
