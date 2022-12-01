@@ -102,3 +102,54 @@ int main(){
 	return 0;
 }
 ........>
+//toupper- it upper cases the given input
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+	char a[100];
+	printf("Enter a string: ");
+	scanf("%s", &a);
+	int i = 0;
+	while(a[i] != '\0'){
+		putchar(toupper(a[i]));
+		++i;
+	}
+	
+	return 0;
+}
+........>
+//tolower- it converts the inputted string into lower case
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+	char a[100];
+	printf("Enter a string: ");
+	scanf("%s", &a);
+	int i = 0;
+	while(a[i] != '\0'){
+		putchar(tolower(a[i]));
+		++i;
+	}
+	
+	return 0;
+}
+........>
+//strcmp- it compares two strings.
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+	char a[100];
+	printf("Enter a string: ");
+	scanf("%s", &a);
+	char b[100];
+	printf("Enter another string: ");
+	scanf("%s", &b);
+	
+	printf(" > %d \n", strcmp(a,b));
+	
+	return 0;
+}
+........>
