@@ -77,7 +77,7 @@ int main(){
 	return 0;
 }
 ............>
-//finding the greatest of numbers using arrays:
+//finding the greatest of numbers using arrays:||kind of same below.
 #include<stdio.h>
 
 int main(){
@@ -176,3 +176,77 @@ int main(){
 	return 0;
 }
 .........>
+//Write a C program to print all negative elements in an array.
+#include<Stdio.h>
+
+int main(){
+	int a[10];
+	printf("ENter the elements of the array: \n");
+	int i;
+	for(i=0;i<10;i++){
+		printf("Element _%d_",i+1);
+		scanf("%d", &a[i]);
+	}
+	for(i=0;i<10;i++){
+		if(a[i]<0){
+			printf("%d", a[i]);
+		}
+		else{
+			continue;
+		}
+	}
+	return 0;
+}
+......>
+//Write a C program to find sum of all array elements. 
+#include<Stdio.h>
+
+int main(){
+	int a[100];
+	int n;
+	printf("Enter the elements of your array: ");
+	scanf("%d", &n);
+	printf("ENter the elements of the array: \n");
+	int i, sum = 0;
+	for(i=0;i<n;i++){
+		printf("Element _%d_",i+1);
+		scanf("%d", &a[i]);
+	}
+	for(i=0;i<n;i++){
+		sum = sum + a[i];
+	}
+	printf("sum is %d", sum);
+	return 0;
+}
+.........>
+//Write a C program to find maximum and minimum element in an array.
+#include<Stdio.h>
+
+int main(){
+	int a[100];
+	int n;
+	printf("Enter the elements of your array: ");
+	scanf("%d", &n);
+	printf("ENter the elements of the array: \n");
+	int i, sum = 0;
+	for(i=0;i<n;i++){
+		printf("Element _%d_",i+1);
+		scanf("%d", &a[i]);
+	}
+	int max = a[0];
+	int min = a[0];
+	for(i=1;i<n;i++){
+		if(a[i] > max){
+			max = a[i];
+		}
+	}
+	for(i=1;i<n;i++){
+		if(a[i] < min){
+			min = a[i];
+		}
+	}
+	printf("Max = %d \n", max);
+	printf("Min = %d \n", min);
+	return 0;
+}
+........>
