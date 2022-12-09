@@ -32,3 +32,32 @@ void printnum(int arr[], int n){
 	printf("\n");
 }
 .........>
+#include<stdio.h>
+
+int odd(int a[], int n);
+
+int main(){
+	int n;
+	printf("enter the number of elements in your array: ");
+	scanf("%d", &n);
+	int a[n];
+	printf("enter the elements of your array: ");
+	int i;
+	for(i=0;i<n;i++){
+		printf("_%d_:", i+1);
+		scanf("%d", &a[i]);
+	}
+	int c;
+	c = odd(a,n);
+	printf("THe number of odd elements are %d", c);
+	return 0;
+}
+int odd(int a[], int n){
+	int i=0, count =0;
+	for(i=0;i<n;i++){
+		if(a[i]%2!=0){
+			count++;
+		}
+	}
+	return count;
+}
