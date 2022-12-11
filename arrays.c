@@ -288,3 +288,38 @@ int main(){
 	return 0;	
 }
 .........>
+//sum of the elements of the diagonal only.
+#include<Stdio.h>
+
+int main(){
+	int a[100][100];
+	int b[100][100];
+	int sum[100][100];
+	int n = 3;
+	int i,j;
+	printf("Enter the elements in your first matrix:\n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			printf("_%d_%d_:", i+1,j+1);
+			scanf("%d", &a[i][j]);
+		}
+	}
+	printf("Enter the elements in your second matrix:\n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			printf("_%d_%d_:", i+1,j+1);
+			scanf("%d", &b[i][j]);
+		}
+	}
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			if(i==j){
+				sum[i][j] = a[i][j] + b[i][j];
+				printf(" %d ", sum[i][j]);
+			}
+			printf("\n");
+		}
+	}
+	return 0;	
+}
+.........>
