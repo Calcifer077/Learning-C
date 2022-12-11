@@ -250,3 +250,41 @@ int main(){
 	return 0;
 }
 ........>
+//adding two matrixes
+#include<Stdio.h>
+
+int main(){
+	int a[100][100];
+	int b[100][100];
+	int sum[100][100];
+	int m1,m2,n1,n2;
+	printf("enter the rows and columns in your first matrix: ");
+	scanf("%d%d", &m1,&m2);
+	printf("enter the elements in your first  matrix:\n");
+	int i,j;
+	for(i=0;i<m1;i++){
+		for(j=0;j<m2;j++){
+			printf("_%d_%d_:", i+1,j+1);
+			scanf("%d", &a[i][j]);
+		}
+	}
+	
+	printf("enter the rows and columns in our second matrix: ");
+	scanf("%d%d", &n1, &n2);
+	for(i=0;i<n1;i++){
+		for(j=0;j<n2;j++){
+			printf("_%d_%d_:", i+1,j+1);
+			scanf("%d", &b[i][j]);
+		}
+	}
+	for(i=0;i<m1;i++){
+		for(j=0;j<m2;j++){
+			sum[i][j] = a[i][j]+b[i][j];
+			printf(" %d ", sum[i][j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;	
+}
+.........>
