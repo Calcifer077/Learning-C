@@ -61,3 +61,22 @@ int odd(int a[], int n){
 	}
 	return count;
 }
+........>
+#include<stdio.h>
+
+int main(){
+	int a[5] = {1,2,3,4,5};
+	int *p = a;
+	int i,n;
+	printf("Enter the element you want to search : ");
+	scanf("%d", &n);
+	int *p2 = &n;
+	for(i=0;i<5;i++){
+		if(*(p+i) = *p2){
+			printf("Element found at %d", *p2);
+			break;
+		}
+	}
+	return 0;
+}
+.......>
