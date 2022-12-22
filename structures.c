@@ -74,3 +74,95 @@ int main(){
 	return 0;
 }
 ......>
+//usnig nested structures
+#include<stdio.h>
+#include<string.h>
+
+struct address{
+	char city[50];
+	int pin;
+	char phone[50];
+};
+struct employ{
+	char name[50];
+	struct address a;
+};
+int main(){
+	struct employ e;
+	printf("Enter the name of the employ: ");
+	scanf("%s", e.name);
+	printf("Enter the city of the employ: ");
+	scanf("%s", e.a.city);
+	printf("enter the pin of the employ:  ");
+	scanf("%d", &e.a.pin);
+	printf("Enter the phone of the employ: ");
+	scanf("%s", e.a.phone);
+	
+	printf("Name of the employ %s \n", e.name);
+	printf("City of the employ %s \n", e.a.city);
+	printf("Pin of the employ %d \n", e.a.pin);
+	printf("phone of the employ %s \n", e.a.phone);
+	return 0;
+}
+..........>
+//nested structures and loops.
+#include<stdio.h>
+#include<string.h>
+
+struct address{
+	char city[50];
+	int pin;
+	char phone[50];
+};
+struct employ{
+	char name[50];
+	struct address a[5];
+};
+int main(){
+	struct employ e[5];
+	int i;
+	for(i=0;i<3;i++){
+		printf("Enter the name of %d employ: ", i+1);
+		scanf("%s", e[i].name);
+		printf("Enter the city of %d employ: ", i+1);
+		scanf("%s", e[i].a[i].city);
+		printf("enter the pin of %d employ:  ", i+1);
+		scanf("%d", &e[i].a[i].pin);
+		printf("Enter the phone of %d employ: ", i+1);
+		scanf("%s", e[i].a[i].phone);
+	}
+	for(i=0;i<3;i++){
+		printf("Name of %d employ %s \n", i+1, e[i].name);
+		printf("City of %d employ %s \n", i+1, e[i].a[i].city);
+		printf("Pin of %d employ %d \n", i+1, e[i].a[i].pin);
+		printf("phone of %d employ %s \n", i+1, e[i].a[i].phone);	
+	}
+	return 0;
+}
+......>
+//using functions and structures
+#include<stdio.h>
+#include<string.h>
+struct student{
+	char name[50];
+	int age;
+	int rollno;
+}e;
+void funct(struct student e);
+int main(){
+	//'struct student e' can also be used here in place of above after the closing of the structure.
+	funct(e);
+	return 0;
+}
+void funct(struct student e){
+	printf("Enter name of the student : ");
+	scanf("%s", e.name);
+	printf("Enter age of the student : ");
+	scanf("%d", &e.age);
+	printf("Enter rollno of the student : ");
+	scanf("%d", &e.rollno);
+	printf("NAme of the student is : %s \n", e.name);
+	printf("Age of the student is : %d \n", e.age);
+	printf("Rollno of the student is : %d \n", e.rollno);
+}
+........>
