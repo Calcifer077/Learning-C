@@ -166,3 +166,28 @@ void funct(struct student e){
 	printf("Rollno of the student is : %d \n", e.rollno);
 }
 ........>
+//using functions pointers and struuctures.
+#include<stdio.h>
+#include<string.h>
+struct student{
+	char name[50];
+	int age;
+	int rollno;
+}e;
+void funct(struct student *e);
+int main(){
+	funct(&e);
+	return 0;
+}
+void funct(struct student *e){
+	printf("Enter name of the student : ");
+	scanf("%s", e->name);
+	printf("Enter age of the student : ");
+	scanf("%d", &e->age);
+	printf("Enter rollno of the student : ");
+	scanf("%d", &e->rollno);
+	printf("NAme of the student is : %s \n", e->name);
+	printf("Age of the student is : %d \n", e->age);
+	printf("Rollno of the student is : %d \n", e->rollno);
+}
+........>
