@@ -1,7 +1,7 @@
 //Pointer are declared by using '*' in front of the variable name.
 //They store the value of memory address of other variabe.
 //It points to the same data type same as its own. Like int pointer will print memory address of only int type.
-//TO print the memory address we use '&' in front of the variable naem.
+//TO print the memory address we use '&' in front of the variable name.
 
 //From google>
 int myAge = 43;     // An int variable
@@ -23,7 +23,7 @@ int main(){
 	int *ptr = &age;
 	printf("age = %d \n", age); //prints the value of age
 	printf("&age = %d  \n", &age); //prints the memory address of age
-	printf("ptr = %d \n", ptr); //prints the value of age
-	printf("*ptr = %d  \n", *ptr); //pritns the memory address of age
+	printf("ptr = %d \n", ptr); //prints the memory address of age
+	printf("*ptr = %d  \n", *ptr); //pritns the value of age
 	return 0;
 }
